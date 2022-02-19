@@ -2,14 +2,18 @@ package br.com.elizane.capdesafio.questoes;
 
 import br.com.elizane.capdesafio.util.Util;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 public class Questao02 {
     private final String especiais = "!@#$%^&*()-+";
     private final int minimo = 6;
+    private final Random rd = new Random();
+
+    boolean especial = false;
+    boolean maiuscula = false;
+    boolean minuscula = false;
+    boolean numero = false;
+
 
     /**
      * Vericar se a senha possue um caracter numérico
@@ -66,32 +70,53 @@ public class Questao02 {
     }
 
     /**
+     * Metodo que retorna um caracter Minúsculo randomico
+     *
+     * @return retonar caracter asccII
+     */
+    private char getRadomCaracterMinusculo() {
+        return (char) (rd.nextInt((122 - 97) + 1) + 97);
+    }
+
+    /**
+     * Metodo que retorna um caracter Maisculo randomico
+     *
+     * @return retorna um caracter asccII
+     */
+    private char getRadomCaracterMaiusculo() {
+        return (char) (rd.nextInt((90 - 65) + 1) + 65);
+    }
+
+    /**
      * Metodo de entrada para processamento da senha
      *
      * @param senha entrar com a senha para verificação
      * @return retorna um Class com as informações para serem analizados
      */
     public RetornoSenha validarSenha(String senha) {
-        senha = "TTTgggDDD";
         String sugestao = "";
+        RetornoSenha retornoSenha;
+
         if (senha.length() >= minimo) {
-            Random rd = new Random();
             char[] indexModificados = new char[senha.length()];
             char cs[] = senha.toCharArray();
-            boolean especial = verificarCaracterEspecias(senha);
-            boolean maiuscula = verificarSeTemMaiuscula(senha);
-            boolean minuscula = verificarSeTemMinuscula(senha);
-            boolean numero = verificarSeTemNumero(senha);
+            especial = verificarCaracterEspecias(senha);
+            maiuscula = verificarSeTemMaiuscula(senha);
+            minuscula = verificarSeTemMinuscula(senha);
+            numero = verificarSeTemNumero(senha);
 
             if (!maiuscula) {
                 for (int i = 0; i < cs.length; i++) {
                     if (Util.isMinuscula(cs[i])) {
                         cs[i] -= 32;
                         indexModificados[i] = 1;
+                        sugestao = Util.charsToString(cs);
+                        break;
+                    } else {
+                        sugestao += senha + getRadomCaracterMaiusculo();
                         break;
                     }
                 }
-                sugestao = Util.charsToString(cs);
             }
 
             if (!minuscula) {
@@ -102,28 +127,69 @@ public class Questao02 {
                         sugestao = Util.charsToString(cs);
                         break;
                     } else {
-                        int max = 122, min = 97;
-                        sugestao += "" + (char) rd.nextInt((max - min) + 1) + min;
+                        if (sugestao.isEmpty())
+                            sugestao = senha + getRadomCaracterMinusculo();
+                        else
+                            sugestao += getRadomCaracterMinusculo();
+                        break;
                     }
                 }
             }
 
             if (!especial) {
                 char[] chars = especiais.toCharArray();
-                sugestao = Util.charsToString(cs) + chars[rd.nextInt(especiais.length())];
+                if (sugestao.isEmpty())
+                    sugestao = Util.charsToString(cs) + chars[rd.nextInt(especiais.length())];
+                else
+                    sugestao = Util.charsToString(cs) + chars[rd.nextInt(especiais.length())];
             }
 
             if (!numero) {
-                sugestao += "" + rd.nextInt(9);
-            }
+                if (sugestao.isEmpty())
+                    sugestao = senha + rd.nextInt(9);
+                else
+                    sugestao += "" + rd.nextInt(9);
 
-            return new RetornoSenha(false, "Sua senha e fraca", senha, sugestao);
+            }
+            retornoSenha = new RetornoSenha((minuscula && minuscula && especial && numero), "Sua senha é fraca veja a sugestão de senha forte", senha, sugestao);
         } else {
+            especial = verificarCaracterEspecias(senha);
+            maiuscula = verificarSeTemMaiuscula(senha);
+            minuscula = verificarSeTemMinuscula(senha);
+            numero = verificarSeTemNumero(senha);
+            sugestao = senha;
             int falta = minimo - senha.length();
-            for (int i = 0; i < minimo; i++) {
-
+            for (int i = 0; i < falta; i++) {
+                if (!especial) {
+                    especial = true;
+                    sugestao += especiais.toCharArray()[rd.nextInt(especiais.length())];
+                    continue;
+                }
+                if (!maiuscula) {
+                    sugestao += getRadomCaracterMaiusculo();
+                    maiuscula = true;
+                    continue;
+                }
+                if (!minuscula) {
+                    sugestao += getRadomCaracterMinusculo();
+                    minuscula = true;
+                    continue;
+                }
+                if (!numero) {
+                    sugestao += "" + rd.nextInt(9);
+                    numero = true;
+                    continue;
+                }
             }
-            return new RetornoSenha(false, "A senha deve ter pelo menos 6 caracters", senha, sugestao);
+            if (sugestao.length() < 6) {
+                falta = minimo - sugestao.length();
+                for (int j = 0; j < falta; j++) {
+                    sugestao += getRadomCaracterMaiusculo();
+                }
+            }
+            retornoSenha = new RetornoSenha(false, "A senha deve ter pelo menos 6 caracters e conter pelo menos um carcer maiúsculo, minúsculo, numerico e especial " + especial, senha, sugestao);
         }
+
+        return retornoSenha;
     }
 }

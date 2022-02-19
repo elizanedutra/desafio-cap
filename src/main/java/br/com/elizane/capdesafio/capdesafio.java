@@ -15,15 +15,10 @@ public class capdesafio {
         /**
          * Metodo exeucuta os args caso venha argumentos ou irá executar o que voce modificado dentro do bloco else
          */
-        /*
         if (args.length > 0) {
             new ProcessArgs().process(args);
         } else
-            new RunQuestoes().todas(10, "ty7t&$eF", "ifailuhkqq");
-
-         */
-
-        new Questao02().validarSenha("");
+            new RunQuestoes().todas(10, "tyteetor", "ifailuhkqq");
 
     }
 }

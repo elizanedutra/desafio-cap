@@ -68,6 +68,8 @@ public class RunQuestoes {
         RetornoSenha retornoSenha = questao02();
         System.out.println("É forte   : " + (retornoSenha.isForte() ? "SIM" : "NÂO"));
         System.out.println("Senha     : " + (retornoSenha.getSenha()));
+        if (!retornoSenha.isForte())
+            System.out.println("Sugestão  : " + (retornoSenha.getSugestao()));
         System.out.println("Mensagem  : " + (retornoSenha.getMsg()));
         System.out.println("--------------------------------------------------------");
         System.out.println("----------- Questões 03");
@@ -93,6 +95,8 @@ public class RunQuestoes {
         System.out.println("É forte   : " + (retornoSenha.isForte() ? "SIM" : "NÂO"));
         System.out.println("Senha     : " + (retornoSenha.getSenha()));
         System.out.println("Mensagem  : " + (retornoSenha.getMsg()));
+        if (!retornoSenha.isForte())
+            System.out.println("Sugestão  : " + (retornoSenha.getSugestao()));
         System.out.println("--------------------------------------------------------");
         System.out.println("----------- Questões 03");
         questao03(palavra);

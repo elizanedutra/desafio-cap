@@ -53,6 +53,7 @@ public class RetornoSenha {
         return "-------------------Questão-02" + "\n" +
                 "É Forte: " + (forte ? "SIM" : "NÂO") + "\n" +
                 "Messagem: " + msg + "\n" +
+                "Sugestão: " + sugestao + "\n" +
                 "senha Informada: " + senha;
     }
 
