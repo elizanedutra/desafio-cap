@@ -101,7 +101,7 @@ public class ProcessArgs {
     public void process(String[] args) {
         String errosArg = "";
         for (String arg : args) {
-            if (arg.toUpperCase().equals("HELP")) {
+            if (arg.trim().toUpperCase().equals("HELP")) {
                 System.out.println(getHelp());
             } else if (arg.contains("=")) {
                 String r = execuarComando(arg.split("="));
