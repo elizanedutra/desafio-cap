@@ -1,10 +1,9 @@
 package br.com.elizane.capdesafio;
 
 import br.com.elizane.capdesafio.process.ProcessArgs;
-import br.com.elizane.capdesafio.questoes.Questao02;
 import br.com.elizane.capdesafio.questoes.RunQuestoes;
 
-public class capdesafio {
+public class Capdesafio {
     /**
      * Metodo main static, metodo principal da aplicação
      * caso venhas argumentos na execução a aplicação ira tratra os argumentos e execuar os camonados passados
