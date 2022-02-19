@@ -69,21 +69,21 @@ public class Questao02 {
                 if (verificarSeTemMaiuscula(senha)) {
                     if (verificarSeTemMinuscula(senha)) {
                         if (verificarSeTemNumero(senha)) {
-                            return new RetornoSenha(true, "Senha Forte", senha);
+                            return new RetornoSenha(true, "Senha Forte", senha, "");
                         } else {
-                            return new RetornoSenha(false, "A senha tem deve conter uma número", senha);
+                            return new RetornoSenha(false, "A senha tem deve conter uma número", senha, "");
                         }
                     } else {
-                        return new RetornoSenha(false, "A senha deve conter uma letra minúsculo", senha);
+                        return new RetornoSenha(false, "A senha deve conter uma letra minúsculo", senha, "");
                     }
                 } else {
-                    return new RetornoSenha(false, "A senha deve conter uma letra maiúsculo", senha);
+                    return new RetornoSenha(false, "A senha deve conter uma letra maiúsculo", senha, "");
                 }
             } else {
-                return new RetornoSenha(false, "A senha deve conter um desses caracteres: !@#$%^&*()-+", senha);
+                return new RetornoSenha(false, "A senha deve conter um desses caracteres: !@#$%^&*()-+", senha, "");
             }
         } else {
-            return new RetornoSenha(false, "A senha deve ter pelo menos 6 caracters", senha);
+            return new RetornoSenha(false, "A senha deve ter pelo menos 6 caracters", senha, "");
         }
     }
 }

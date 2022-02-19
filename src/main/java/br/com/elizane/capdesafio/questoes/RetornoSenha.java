@@ -4,12 +4,13 @@ public class RetornoSenha {
     private boolean forte;
     private String msg;
     private String senha;
-    private String sugestao = "";
+    private String sugestao;
 
-    public RetornoSenha(boolean forte, String msg, String senha) {
+    public RetornoSenha(boolean forte, String msg, String senha, String sugestao) {
         this.forte = forte;
         this.msg = msg;
         this.senha = senha;
+        this.sugestao = sugestao;
     }
 
     public RetornoSenha() {
