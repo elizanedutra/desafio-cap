@@ -104,7 +104,6 @@ public class Questao02 {
             maiuscula = verificarSeTemMaiuscula(senha);
             minuscula = verificarSeTemMinuscula(senha);
             numero = verificarSeTemNumero(senha);
-
             if (!maiuscula) {
                 for (int i = 0; i < cs.length; i++) {
                     if (Util.isMinuscula(cs[i])) {
@@ -189,7 +188,6 @@ public class Questao02 {
             }
             retornoSenha = new RetornoSenha(false, "A senha deve ter pelo menos 6 caracters e conter pelo menos um carcer maiúsculo, minúsculo, numerico e especial " + especial, senha, sugestao);
         }
-
         return retornoSenha;
     }
 }

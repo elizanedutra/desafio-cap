@@ -120,15 +120,10 @@ public class ProcessArgs {
                 }
             }
         }
-        int last = errosArg.lastIndexOf(",");
-        if (last > -1) {
-
-        }
 
         if (!errosArg.isEmpty()) {
             boolean nErros = errosArg.contains(",");
-            if (errosArg.contains(","))
-                System.out.println("Não foi possivel processar" + (nErros ? " os" : " o") + (nErros ? " comandos" : " comando") + errosArg);
+            System.out.println("Não foi possivel processar" + (nErros ? " os" : " o") + (nErros ? " comandos " : " comando ") + errosArg);
         }
     }
 }
