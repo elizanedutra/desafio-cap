@@ -1,7 +1,15 @@
 package br.com.elizane.capdesafio.questoes;
 
+import br.com.elizane.capdesafio.util.Util;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
 public class Questao02 {
     private final String especiais = "!@#$%^&*()-+";
+    private final int minimo = 6;
 
     /**
      * Vericar se a senha possue um caracter numérico
@@ -64,26 +72,58 @@ public class Questao02 {
      * @return retorna um Class com as informações para serem analizados
      */
     public RetornoSenha validarSenha(String senha) {
-        if (senha.length() >= 6) {
-            if (verificarCaracterEspecias(senha)) {
-                if (verificarSeTemMaiuscula(senha)) {
-                    if (verificarSeTemMinuscula(senha)) {
-                        if (verificarSeTemNumero(senha)) {
-                            return new RetornoSenha(true, "Senha Forte", senha, "");
-                        } else {
-                            return new RetornoSenha(false, "A senha tem deve conter uma número", senha, "");
-                        }
-                    } else {
-                        return new RetornoSenha(false, "A senha deve conter uma letra minúsculo", senha, "");
+        senha = "TTTgggDDD";
+        String sugestao = "";
+        if (senha.length() >= minimo) {
+            Random rd = new Random();
+            char[] indexModificados = new char[senha.length()];
+            char cs[] = senha.toCharArray();
+            boolean especial = verificarCaracterEspecias(senha);
+            boolean maiuscula = verificarSeTemMaiuscula(senha);
+            boolean minuscula = verificarSeTemMinuscula(senha);
+            boolean numero = verificarSeTemNumero(senha);
+
+            if (!maiuscula) {
+                for (int i = 0; i < cs.length; i++) {
+                    if (Util.isMinuscula(cs[i])) {
+                        cs[i] -= 32;
+                        indexModificados[i] = 1;
+                        break;
                     }
-                } else {
-                    return new RetornoSenha(false, "A senha deve conter uma letra maiúsculo", senha, "");
                 }
-            } else {
-                return new RetornoSenha(false, "A senha deve conter um desses caracteres: !@#$%^&*()-+", senha, "");
+                sugestao = Util.charsToString(cs);
             }
+
+            if (!minuscula) {
+                for (int i = 0; i < cs.length; i++) {
+                    if (Util.isMaisculas(cs[i]) && ((int) indexModificados[i] != 1)) {
+                        cs[i] += 32;
+                        indexModificados[i] = 1;
+                        sugestao = Util.charsToString(cs);
+                        break;
+                    } else {
+                        int max = 122, min = 97;
+                        sugestao += "" + (char) rd.nextInt((max - min) + 1) + min;
+                    }
+                }
+            }
+
+            if (!especial) {
+                char[] chars = especiais.toCharArray();
+                sugestao = Util.charsToString(cs) + chars[rd.nextInt(especiais.length())];
+            }
+
+            if (!numero) {
+                sugestao += "" + rd.nextInt(9);
+            }
+
+            return new RetornoSenha(false, "Sua senha e fraca", senha, sugestao);
         } else {
-            return new RetornoSenha(false, "A senha deve ter pelo menos 6 caracters", senha, "");
+            int falta = minimo - senha.length();
+            for (int i = 0; i < minimo; i++) {
+
+            }
+            return new RetornoSenha(false, "A senha deve ter pelo menos 6 caracters", senha, sugestao);
         }
     }
 }

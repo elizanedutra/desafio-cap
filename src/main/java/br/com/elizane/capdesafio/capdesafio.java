@@ -1,6 +1,7 @@
 package br.com.elizane.capdesafio;
 
 import br.com.elizane.capdesafio.process.ProcessArgs;
+import br.com.elizane.capdesafio.questoes.Questao02;
 import br.com.elizane.capdesafio.questoes.RunQuestoes;
 
 public class capdesafio {
@@ -14,9 +15,15 @@ public class capdesafio {
         /**
          * Metodo exeucuta os args caso venha argumentos ou irá executar o que voce modificado dentro do bloco else
          */
+        /*
         if (args.length > 0) {
             new ProcessArgs().process(args);
         } else
             new RunQuestoes().todas(10, "ty7t&$eF", "ifailuhkqq");
+
+         */
+
+        new Questao02().validarSenha("");
+
     }
 }
