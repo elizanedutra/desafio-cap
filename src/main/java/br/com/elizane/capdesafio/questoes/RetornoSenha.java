@@ -4,6 +4,7 @@ public class RetornoSenha {
     private boolean forte;
     private String msg;
     private String senha;
+    private String sugestao = "";
 
     public RetornoSenha(boolean forte, String msg, String senha) {
         this.forte = forte;
@@ -38,18 +39,27 @@ public class RetornoSenha {
         this.senha = senha;
     }
 
+    public String getSugestao() {
+        return sugestao;
+    }
+
+    public void setSugestao(String sugestao) {
+        this.sugestao = sugestao;
+    }
+
     @Override
     public String toString() {
         return "-------------------Questão-02" + "\n" +
-                "Forte: " + (forte ? "SIM" : "NÂO") + "\n" +
+                "É Forte: " + (forte ? "SIM" : "NÂO") + "\n" +
                 "Messagem: " + msg + "\n" +
-                "senha: " + senha;
+                "senha Informada: " + senha;
     }
 
     public void detalheSenha() {
         System.out.println("É forte        : " + (this.isForte() ? "SIM" : "NÂO"));
         System.out.println("Menssagem      : " + this.getMsg());
         System.out.println("Senha Informada: " + this.getSenha());
+        System.out.println("Segestão: " + this.getSugestao());
     }
 
 }

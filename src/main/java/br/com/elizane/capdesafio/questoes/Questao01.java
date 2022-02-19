@@ -1,8 +1,10 @@
 package br.com.elizane.capdesafio.questoes;
 
+import java.util.Arrays;
+
 public class Questao01 {
 
-    private final static String escada[] = new String[6];
+    private final static String escada[] = {"", "", "", "", "", ""};
 
     /**
      * Metodo montar a linha espessifica do degrau da escada
@@ -54,8 +56,11 @@ public class Questao01 {
     /**
      * Medoto pricimpal onde inicia o fluxo de construção saida no console da escada
      */
-    public static void executarQuestao() {
+    public static String[] executarQuestao() {
+        System.out.println();
         montarEscada();
         mostrarEscada();
+
+        return escada;
     }
 }

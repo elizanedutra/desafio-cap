@@ -4,17 +4,44 @@ import br.com.elizane.capdesafio.questoes.RunQuestoes;
 import br.com.elizane.capdesafio.util.Util;
 
 public class ProcessArgs {
-
+    /**
+     * Metodo que constroi o Help do cli
+     *
+     * @return reotuna o help
+     */
     private String getHelp() {
         StringBuilder builder = new StringBuilder();
         builder.append("-----------------------Desafio CapGemini---------------------------\n");
-        builder.append("Os comando validos são os seguintes\n");
-        builder.append("Q1=default -> executar a questão com valores default\n");
-        builder.append("Q1=6 -> Informe um valor inteiro, a escada será contruida com a quantidade de degaus informado\n");
-        builder.append("Q2=default -> executar a questão com senha default\n");
-        builder.append("Q2=Jllddu se informa uma senha a senha será validada\n");
-        builder.append("Q3=default -> executar a questão com senha default\n");
-        builder.append("Q3=default -> ao informa uma palava o sistema ira procurar por anagramas\n");
+        builder.append("Comando para executar a Questão 01\n");
+        builder.append("    Q1=default\n");
+        builder.append("    ESCADA=default\n");
+        builder.append("    E=default\n");
+        builder.append("    executar a questão com valores default\n");
+        builder.append("    ---------------------------------------------------------------\n");
+        builder.append("    Q1=6\n");
+        builder.append("    ESCADA=6\n");
+        builder.append("    E=6\n");
+        builder.append("    Informe um valor inteiro, a escada será contruida com a quantidade de degaus informado\n\n");
+        builder.append("Comando para executar a Questão 02\n");
+        builder.append("    Q2=default\n");
+        builder.append("    E=default\n");
+        builder.append("    SENHA=default\n");
+        builder.append("    executar a questão com senha default\n");
+        builder.append("    ---------------------------------------------------------------\n");
+        builder.append("    Q2=Jllddu\n");
+        builder.append("    SENHA=Jllddu\n");
+        builder.append("    S=Jllddu\n");
+        builder.append("    informa uma senha para ser validada\n\n");
+        builder.append("Comando para executar a Questão 03\n");
+        builder.append("    Q3=default\n");
+        builder.append("    ANAGRAMA=default\n");
+        builder.append("    A=default\n");
+        builder.append("    executar a questão com senha default\n");
+        builder.append("    ---------------------------------------------------------------\n");
+        builder.append("    Q3=kkddjjuusodfuap\n");
+        builder.append("    ANAGRAMA=kkddjjuusodfuap\n");
+        builder.append("    A=kkddjjuusodfuap\n");
+        builder.append("    ao informa uma palava o sistema ira procurar por anagramas\n");
         builder.append("-------------------------------------------------------------------\n");
         return builder.toString();
     }
