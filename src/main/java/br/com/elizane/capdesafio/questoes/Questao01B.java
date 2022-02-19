@@ -45,7 +45,7 @@ public class Questao01B {
         for (int d = 1; d < (tamannho + 1); d++) {
             escada[d - 1] = criarDegarus(d, tamannho);
         }
-
+        System.out.println("-------------------Questão-01");
         for (String s : escada) {
             System.out.println(s);
         }

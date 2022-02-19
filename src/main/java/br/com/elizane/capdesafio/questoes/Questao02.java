@@ -1,12 +1,11 @@
 package br.com.elizane.capdesafio.questoes;
 
-import br.com.elizane.capdesafio.RetornoSenha;
-
 public class Questao02 {
     private final String especiais = "!@#$%^&*()-+";
 
     /**
      * Vericar se a senha possue um caracter numérico
+     *
      * @param senha entrar com a senha para verificação
      * @return retorna verdadeiro caso encomtre um carcter numérico e false se não encontrar
      */
@@ -19,8 +18,9 @@ public class Questao02 {
 
     /**
      * Metodo que verifica se tem um caracter especial na senha
+     *
      * @param senha entrar com a senha para ser analizada
-     * @return  retorna verdadeiro caso encomtre um carcter especial e false se não tiver
+     * @return retorna verdadeiro caso encomtre um carcter especial e false se não tiver
      */
     protected boolean verificarCaracterEspecias(String senha) {
         for (char c : senha.toCharArray()) {
@@ -33,6 +33,7 @@ public class Questao02 {
 
     /**
      * Metodo que verifica se tem um caracter minusculos na senha
+     *
      * @param senha entrar com a senha para verificação
      * @return retorna verdadeiro caso encomtre um caracter minúsculo e false se não encontrar
      */
@@ -45,6 +46,7 @@ public class Questao02 {
 
     /**
      * Metodo que verifica se tem um caracter maiscusculos na senha
+     *
      * @param senha entrar com a senha para verificação
      * @return retorna verdadeiro caso encomtre um caracter minúsculo e false se não encontrar
      */
@@ -57,6 +59,7 @@ public class Questao02 {
 
     /**
      * Metodo de entrada para processamento da senha
+     *
      * @param senha entrar com a senha para verificação
      * @return retorna um Class com as informações para serem analizados
      */

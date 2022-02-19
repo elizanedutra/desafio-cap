@@ -78,6 +78,8 @@ public class Questao03 {
             for (List<String> l : palavras) {
                 anagramas.addAll(encontrarAnagramas(l));
             }
+
+            System.out.println("-------------------Questão-03");
             System.out.println("Anagramas : " + anagramas.toString());
             if (anagramas.size() > 1) {
                 System.out.println("Quantidade: " + anagramas.size() / 2);

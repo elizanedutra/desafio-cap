@@ -1,7 +1,5 @@
 package br.com.elizane.capdesafio.questoes;
 
-import br.com.elizane.capdesafio.RetornoSenha;
-
 /**
  * Class que organizará a execução dos exercico, metodos que possuem valores default ou com strings informadas
  */

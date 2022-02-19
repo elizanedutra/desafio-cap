@@ -6,6 +6,7 @@ public class Questao01 {
 
     /**
      * Metodo montar a linha espessifica do degrau da escada
+     *
      * @param n
      */
     private static void getDegrau(int n) {
@@ -35,6 +36,7 @@ public class Questao01 {
      * Metodo para imprimir escada no console
      */
     private static void mostrarEscada() {
+        System.out.println("-------------------Questão-01");
         for (String s : escada) {
             System.out.println(s);
         }

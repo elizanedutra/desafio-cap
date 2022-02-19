@@ -1,4 +1,4 @@
-package br.com.elizane.capdesafio;
+package br.com.elizane.capdesafio.questoes;
 
 public class RetornoSenha {
     private boolean forte;
@@ -40,11 +40,10 @@ public class RetornoSenha {
 
     @Override
     public String toString() {
-        return "RetornoSenha{" +
-                "forte=" + forte +
-                ", msg='" + msg + '\'' +
-                ", senha='" + senha + '\'' +
-                '}';
+        return "-------------------Questão-02" + "\n" +
+                "Forte: " + (forte ? "SIM" : "NÂO") + "\n" +
+                "Messagem: " + msg + "\n" +
+                "senha: " + senha;
     }
 
     public void detalheSenha() {
