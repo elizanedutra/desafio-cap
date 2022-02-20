@@ -23,6 +23,15 @@ RunQuestoes runQuestoes = new RunQuestoes();// Criar Objeto responsavel bom abst
             
 runQuestoes.todas(); // Executar todas as quetões com valores default com base no enuciando 
 runQuestoes.todas(10, "tyteetor", "ifailuhkqq"); // Executar todas as questões com valores de entrada
+```
+**Saida Questão 01**
+![saida-q1](https://user-images.githubusercontent.com/98763411/154825129-b22d35ee-f420-4d32-899f-b8804dddaacc.png)
+
+```
+RunQuestoes runQuestoes = new RunQuestoes();// Criar Objeto responsavel bom absttrair a execução dos Questões
+            
+runQuestoes.todas(); // Executar todas as quetões com valores default com base no enuciando 
+runQuestoes.todas(10, "tyteetor", "ifailuhkqq"); // Executar todas as questões com valores de entrada
             
 runQuestoes.questao01(); // executa a questão com valor default conforme enuciado
 runQuestoes.questao01(10); // Executar todas as questões com valores de entrada
@@ -34,7 +43,6 @@ runQuestoes.questao03(); // executa a questão com valor default conforme enucia
 runQuestoes.questao03("JoofgttHf"); // Executar todas as questões com valores de entrada
 
 ```  
-
   
  
 
