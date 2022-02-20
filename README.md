@@ -24,6 +24,9 @@ RunQuestoes runQuestoes = new RunQuestoes();// Criar Objeto responsavel bom abst
 runQuestoes.todas(); // Executar todas as quetões com valores default com base no enuciando 
 runQuestoes.todas(10, "tyteetor", "ifailuhkqq"); // Executar todas as questões com valores de entrada
 ```
+**Saida de todas as Questões**
+![saida-q4](https://user-images.githubusercontent.com/98763411/154825572-f84ebe0a-4168-4825-83d8-6882a19f4d3e.png)
+
 
 
 ```
@@ -59,6 +62,46 @@ runQuestoes.questao03("JoofgttHf"); // Executar todas as questões com valores d
 ```  
 **Saida Questão 03**
 ![saida-q3](https://user-images.githubusercontent.com/98763411/154825216-44143d4b-0260-44b7-b01a-d16ef6590141.png)
- 
+
+> Comoandos CLI basico para brincamos com o .jar no terminal
+
+<p>
+Comando Help
+    Imprime todos os comandos suportado
+    
+Comando para executar a Questão 01
+    Q1=default
+    ESCADA=default
+    E=default
+    executar a questão com valores default
+    ---------------------------------------------------------------
+    Q1=6
+    ESCADA=6
+    E=6
+    Informe um valor inteiro, a escada será contruida com a quantidade de degaus informado
+
+Comando para executar a Questão 02
+    Q2=default
+    E=default
+    SENHA=default
+    executar a questão com senha default
+    ---------------------------------------------------------------
+    Q2=Jllddu
+    SENHA=Jllddu
+    S=Jllddu
+    informa uma senha para ser validada
+
+Comando para executar a Questão 03
+    Q3=default
+    ANAGRAMA=default
+    A=default
+    executar a questão com senha default
+    ---------------------------------------------------------------
+    Q3=kkddjjuusodfuap
+    ANAGRAMA=kkddjjuusodfuap
+    A=kkddjjuusodfuap
+    ao informa uma palava o sistema ira procurar por anagramas
+-------------------------------------------------------------------
+</p> 
 
 
