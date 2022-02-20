@@ -58,10 +58,12 @@ public class RetornoSenha {
     }
 
     public void detalheSenha() {
+        System.out.println("-------------------Questão-02");
         System.out.println("É forte        : " + (this.isForte() ? "SIM" : "NÂO"));
         System.out.println("Menssagem      : " + this.getMsg());
+        if (!this.isForte())
+            System.out.println("Segestão: " + this.getSugestao());
         System.out.println("Senha Informada: " + this.getSenha());
-        System.out.println("Segestão: " + this.getSugestao());
     }
 
 }

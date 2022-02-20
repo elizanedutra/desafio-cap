@@ -64,6 +64,7 @@ public class RunQuestoes {
         questao01();
         questao02();
         questao03();
+        System.out.println();
         System.out.println("----------- FIM ----------------------------------------\n");
     }
 
