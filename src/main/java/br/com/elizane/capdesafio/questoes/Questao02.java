@@ -188,6 +188,7 @@ public class Questao02 {
             }
             retornoSenha = new RetornoSenha(false, "A senha deve ter pelo menos 6 caracters e conter pelo menos um carcer maiúsculo, minúsculo, numerico e especial " + especial, senha, sugestao);
         }
+        retornoSenha.detalheSenha();
         return retornoSenha;
     }
 }
