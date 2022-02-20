@@ -61,20 +61,10 @@ public class RunQuestoes {
      */
     public void todas() {
         System.out.println("----------- Executar Todas as Questões -----------------");
-        System.out.println("----------- Questões 01");
         questao01();
-        System.out.println("--------------------------------------------------------");
-        System.out.println("----------- Questões 02");
-        RetornoSenha retornoSenha = questao02();
-        System.out.println("É forte   : " + (retornoSenha.isForte() ? "SIM" : "NÂO"));
-        System.out.println("Senha     : " + (retornoSenha.getSenha()));
-        if (!retornoSenha.isForte())
-            System.out.println("Sugestão  : " + (retornoSenha.getSugestao()));
-        System.out.println("Mensagem  : " + (retornoSenha.getMsg()));
-        System.out.println("--------------------------------------------------------");
-        System.out.println("----------- Questões 03");
+        questao02();
         questao03();
-        System.out.println("----------- FIM ----------------------------------------");
+        System.out.println("----------- FIM ----------------------------------------\n");
     }
 
     /**
@@ -84,22 +74,12 @@ public class RunQuestoes {
      * @param senha         informa a senha para ser analizada
      * @param palavra       informa a string que será analizar se tem anagrama
      */
-
     public void todas(int tamanhoEscada, String senha, String palavra) {
         System.out.println("----------- Executar Todas as Questões -----------------");
-        System.out.println("----------- Questões 01");
         questao01(tamanhoEscada);
-        System.out.println("--------------------------------------------------------");
-        System.out.println("----------- Questões 02");
-        RetornoSenha retornoSenha = questao02(senha);
-        System.out.println("É forte   : " + (retornoSenha.isForte() ? "SIM" : "NÂO"));
-        System.out.println("Senha     : " + (retornoSenha.getSenha()));
-        System.out.println("Mensagem  : " + (retornoSenha.getMsg()));
-        if (!retornoSenha.isForte())
-            System.out.println("Sugestão  : " + (retornoSenha.getSugestao()));
-        System.out.println("--------------------------------------------------------");
-        System.out.println("----------- Questões 03");
+        questao02(senha);
         questao03(palavra);
+        System.out.println();
         System.out.println("----------- FIM ----------------------------------------");
     }
 
