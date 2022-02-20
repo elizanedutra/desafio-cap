@@ -3,7 +3,7 @@
 
 # EU ESTOU PRONTA PARA CONSTRUIR O MEU FUTURO...
 
-**O projeto voi feito em java com maven, eu procurei atenter os requisitos e implementar algums funcionalidades por minha conta, foi implementado um CLI onde posibilitar testar todas as execuções das questões com comandos espessificos** 
+**O projeto voi feito em java com maven, eu procurei atenter os requisitos e implementar algums funcionalidades por minha conta, foi implementado um CLI onde posibilitar testar todas as execuções das questões com comandos espessificos**
 
 > Projeto DESAFIO DE PROGRAMAÇÃO - ACADEMIA CAPGEMINI
 * Questão 01
@@ -65,43 +65,43 @@ runQuestoes.questao03("JoofgttHf"); // Executar todas as questões com valores d
 
 > Comoandos CLI basico para brincamos com o .jar no terminal
 
-<p>
-Comando Help
-    Imprime todos os comandos suportado
-    
-Comando para executar a Questão 01
-    Q1=default
-    ESCADA=default
-    E=default
-    executar a questão com valores default
-    ---------------------------------------------------------------
-    Q1=6
-    ESCADA=6
-    E=6
-    Informe um valor inteiro, a escada será contruida com a quantidade de degaus informado
+1. Comando Help
+   * Imprime todos os comandos suportado
 
-Comando para executar a Questão 02
-    Q2=default
-    E=default
-    SENHA=default
-    executar a questão com senha default
-    ---------------------------------------------------------------
-    Q2=Jllddu
-    SENHA=Jllddu
-    S=Jllddu
-    informa uma senha para ser validada
+2. Comando para executar a Questão 01
+   * Q1=default
+   * ESCADA=default
+   * E=default
+   * executar a questão com valores default
+   * 
+   * Q1=6
+   * ESCADA=6
+   * E=6
+   * Informe um valor inteiro, a escada será contruida com a quantidade de degaus informado
 
-Comando para executar a Questão 03
-    Q3=default
-    ANAGRAMA=default
-    A=default
-    executar a questão com senha default
-    ---------------------------------------------------------------
-    Q3=kkddjjuusodfuap
-    ANAGRAMA=kkddjjuusodfuap
-    A=kkddjjuusodfuap
-    ao informa uma palava o sistema ira procurar por anagramas
--------------------------------------------------------------------
-</p> 
+3. Comando para executar a Questão 02
+   * Q2=default
+   * E=default
+   * SENHA=default
+   * executar a questão com senha default
+
+   * Q2=Jllddu
+   * SENHA=Jllddu
+   * S=Jllddu
+   * informa uma senha para ser validada
+
+4. Comando para executar a Questão 03
+   * Q3=default
+   * ANAGRAMA=default
+   * A=default
+   * executar a questão com senha default
+
+   * Q3=kkddjjuusodfuap
+   * ANAGRAMA=kkddjjuusodfuap
+   * A=kkddjjuusodfuap
+   * ao informa uma palava o sistema ira procurar por anagramas
+
+> Contato:
+> elizanedutra3011@gmail.com
 
 
